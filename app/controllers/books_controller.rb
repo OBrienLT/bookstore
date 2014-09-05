@@ -5,5 +5,6 @@ class BooksController < ApplicationController
 	end
 	def show
 		@book = Book.find(params[:id])
+		@total_books = Book.count
 	end
 end

@@ -7,4 +7,5 @@
 	<p><lable>Price:</lable> <%= number_to_currency(@book.price) %></p>
 </article>
 
+<p><%= @book.id %> of <%= @total_books %> books</p>
 <%= link_to 'All Books', books_path %>
