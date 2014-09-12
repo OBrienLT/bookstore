@@ -8,4 +8,4 @@
 </article>
 
 <p>Book <%= @book.id %> of <%= @total_books %> books available.</p>
-<%= link_to 'All Books', books_path %>
+<%= link_to 'All Books', books_path %> | <%= link_to 'Edit', edit_book_path(@book) %>
