@@ -4,4 +4,5 @@
 <% @books.each do |book| %>
 	<li><i><%= link_to(book.title, book) %></i> by <%= book.author %></li>
 <% end %>
+<%= link_to 'New Book', new_book_path %>
 </ol>
