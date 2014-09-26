@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 
 	def index
 		@available_at = Time.now
-		@books = Book.all
+		@books = Book.order(:title).page(params[:page])
 	end
 	def show
 		@total_books = Book.count
