@@ -13,4 +13,6 @@ class Book < ActiveRecord::Base
 		numericality: {greater_than_or_equal_to: 0},
 		if: "price.present?"
 
+	has_many :reviews
+
 end
