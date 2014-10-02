@@ -1,5 +1,9 @@
 class Book < ActiveRecord::Base
 
+	def average_stars
+		reviews.average(:stars)
+	end
+
 	scope :bargains, -> { where('price < 10.10') }
 	scope :by, ->(author) { where('author = ?', author) }
 

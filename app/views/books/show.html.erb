@@ -8,6 +8,8 @@
 	<p><lable>Price:</lable> <%= number_to_currency(@book.price) %></p>
 </article>
 
+<p><label>Average Review:</label> <%= format_average_stars(@book) %></p>
+
 <p>
 	Read all
 	<%= link_to pluralize(@book.reviews.size, 'review'), book_reviews_path(@book) %>
