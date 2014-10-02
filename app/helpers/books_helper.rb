@@ -7,7 +7,7 @@ module BooksHelper
 		if average
 			pluralize(number_with_precision(average, precision: 1), 'star')
 		else
-			'No reviews'
+			content_tag(:strong, 'No reviews')
 		end
 	end
 end
