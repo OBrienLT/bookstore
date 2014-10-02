@@ -4,6 +4,10 @@ class Book < ActiveRecord::Base
 		reviews.average(:stars)
 	end
 
+	def recent_reviews(recent_count = 2)
+		reviews.order('created_at desc').limit(recent_count)
+	end
+
 	scope :bargains, -> { where('price < 10.10') }
 	scope :by, ->(author) { where('author = ?', author) }
 
