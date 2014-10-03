@@ -22,6 +22,8 @@
 </section>
  <% end %>
 
+ <%= link_to 'Write a Review', new_book_review_path(@book) %>
+
 <p>Book <%= @book.id %> of <%= @total_books %> books available.</p>
 <%= link_to 'All Books', books_path %> | <%= link_to 'Edit', edit_book_path(@book) %>
 <%= button_to 'Delete', @book,
