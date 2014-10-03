@@ -4,7 +4,7 @@
 	<%= f.label :name %>
 	<%= f.text_field :name, autofocus: true, placeholder: 'Name' %><br />
 	<%= f.label :stars %>
-	<%= Review::STARS.each do |star| %>
+	<% Review::STARS.each do |star| %>
 		<%= f.radio_button :stars, star %> <%= star %>
 	<% end %><br />
 	<%= f.label :comment %><br />
